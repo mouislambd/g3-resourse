@@ -32,8 +32,8 @@ display: flex;
 
 }
 main{
-    /* max-width:1440px ;
-    margin: 0 auto; */
+    max-width:1440px ;
+    margin: 0 auto;
 
 }
 main > section{
@@ -83,13 +83,15 @@ main > section{
     }
 
   /* team features styles */
-.team{
+.team{max-width: 1400px;
+    margin: 0 auto;
 
 }
 .team-tag-conteners{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 24px;
+
 }
 
 .our-features{
@@ -105,26 +107,236 @@ max-width: 543px;
     font-weight: 500;
 }
 
+/* some fact related section */
+.fact-contenar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    /* resposive media qureary */
-@media screen and ( max-width: 576px){
-    .navbar,.nav-link, .teams{
-        flex-direction:column ;
+.fact-card {
+    border: 1px solid rgb(254, 134, 87);
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.flex-description {
+    max-width: 540px;
+    margin: 10px 15px;
+}
+
+.features-title {
+    margin: 10px 15px;
+    font-size: 2rem;
+
+}
+
+/* response releted desging */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+
+
+
+
+/* Responsive Media Queries */
+
+
+/* medium divaicer jonno */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams {
+        flex-direction: column;
     }
-    .team-tag-conteners{
-        grid-template-columns: repeat(1,1fr);
+
+    .our-features {
+        margin: 30px auto;
     }
-    .our-features{
-        margin-left: 20px;
+
+    .fact-contenar ,.sponsor-companies {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 20px;
     }
 }
-/* medium device jonno responsive */
-    @media screen and (min-width:576px) and (max-width:992) {
-        .team{ flex-direction: column;
 
-        }
-        .our-features{
-            margin: 50px auto;
-        }
+/* Mobile - 576px এর নিচে */
+@media screen and (max-width: 576px) {
+
+    .navbar,
+    .nav-link,
+    .teams {
+        flex-direction: column; 
+        
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    main > section{margin-top: 40px;}
     
+.navbar {
+    padding: 15px;
+}
+
+.brand {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    margin-top: 8px;
+    gap: 5px;
+}
+
+.nav-item {
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.banner {
+    padding:0 15px;
+}
+
+.banner-content {
+    padding: 15px 0;
+    margin-bottom: 20px;max-width: 100%;
+}
+
+.banner-title {
+    font-size: 1.8rem;
+    /* আরো ছোট করলাম */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.banner-discription {
+    font-size: 0.85rem;
+}
+
+.team-tag-conteners, .sponsor-companies{
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+
+.our-features {
+    margin: 15px;
+    padding: 0 15px;
+}
+
+.fact-contenar ,.sponsor-companies {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+    justify-items: center;
+}
+
+.fact-card {
+    width: 180px;
+    height: 180px;
+}
+
+.flex-description {
+    margin: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.features-title {
+    margin: 10px 15px;
+    font-size: 1.8rem;
+}
+}
+    .team-tag-conteners {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .our-features {
+        margin-left: 15px;
+        padding: 0 15px;
+    }
+
+/* extra small devaice */
+@media screen and (max-width: 270px) {
+    .brand {
+        font-size: 1.5rem;
+    }
+.team-tag-conteners ,.sponsor-companies{
+    grid-template-columns: 1fr;
+}
+    .banner-title {
+        font-size: 1.1rem;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .banner-discription {
+        font-size: 0.6rem;
+    }
+
+    .praimary-bnt {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .features-title {
+        font-size: 1.4rem;
+    }
+
+    .features-discripstion {
+        font-size: 0.75rem;
+    }
+
+    .fact-card {
+        width: 140px;
+        height: 140px;
+    }
+
+    .fact-number {
+        font-size: 1.8rem;
+    }
+
+    .fact-name {
+        font-size: 0.9rem;
+    }
+
+    .nav-item {
+        margin-right: 5px;
+    }
+
+    .nav {
+        font-size: 0.85rem;
+    }
 }
